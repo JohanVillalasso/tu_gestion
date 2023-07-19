@@ -20,3 +20,14 @@ class Cliente(models.Model):
     ACTIVO = '1', _('Activo')
     INACTIVO = '0', _('Inactivo')
   estado_cliente = models.CharField(max_length=1, choices=EstadoCliente.choices, default=EstadoCliente.ACTIVO, verbose_name="Estado del cliente")
+  
+class PersonaNatural(models.TextChoices):
+  id_documento = models.CharField(max_length=45, verbose_name="N° de documento del cliente")
+  nombre_cliente = models.CharField(max_length=60, verbose_name="Primer nombre del cliente")
+  nombre_cliente_dos = models.CharField(max_length=60, verbose_name="Segundo nombre del cliente (Opcional)")
+  apellido_cliente = models.CharField(max_length=60, verbose_name="Primer apellido del cliente")
+  apellido_cliente_dos = models.CharField(max_length=60, verbose_name="Segundo apellido del cliente (Opcional)")
+  
+class PersonaJuridica(models.TextChoices):
+  nit = models.CharField(max_length=45, verbose_name="N° de nit de la empresa o negocio")
+  razon_social = models.CharField(max_length=100, verbose_name="Nombre de la empresa o negocio")
