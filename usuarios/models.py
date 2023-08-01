@@ -40,10 +40,10 @@ class PuntoVenta(models.Model):
   class Estado(models.TextChoices):
     ACTIVO = '1', _('Activo')
     INACTIVO = '0', _('Inactivo')
-  estado = models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")  
+  estado = models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")    
   
   cod_CiudDANE = models.ForeignKey(Ciudades, on_delete=models.PROTECT, related_name='Ciudades')  
-
+  
   
   def __str__(self):
     return "%s %s" %(self.nombre, self.direccion)

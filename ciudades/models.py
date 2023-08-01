@@ -16,9 +16,11 @@ class Departamentos(models.Model):
 # CIUDADES 
 class Ciudades(models.Model): 
   cod_CiudDANE = models.CharField(max_length=4, verbose_name="Código Ciudad")
-  nombre_ciudad = models.CharField(max_length=60, verbose_name="Ciudad")
-  cod_DeptDANE = models.ForeignKey(Departamentos, on_delete=models.PROTECT, verbose_name="Código Departamento")
-  # Estado
+  nombre_ciudad = models.CharField(max_length=60, verbose_name="Ciudad")  
+  
+  cod_DeptDANE = models.ForeignKey(Departamentos, on_delete=models.PROTECT, verbose_name="Código Departamento")  
+  
+  # Estado  
   class Estado(models.TextChoices):
     ACTIVO = '1', _('Activo')
     INACTIVO = '0', _('Inactivo')
