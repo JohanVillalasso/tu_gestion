@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from ciudades.models import Ciudades 
+from ciudades.models import Ciudades
 
  
 # PERSONA NATURAL   
@@ -13,7 +13,6 @@ class PersonaNatural(models.Model):
   
   def __str__(self):
     return "%s %s %s %s %s" %(self.id_documento, self.nombre_cliente, self.nombre_cliente_dos, self.apellido_cliente, self.apellido_cliente_dos)
-
 
 # PERSONA JURIDICA   
 class PersonaJuridica(models.Model):
