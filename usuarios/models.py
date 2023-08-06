@@ -1,18 +1,18 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from ciudades.models import Ciudades 
+from ciudades.models import Ciudad
 
 
 # USUARIO
 class Usuario(models.Model):
-  codigo_nomina = models.CharField(max_length=45, verbose_name="Código nómina usuario")
-  cedula = models.CharField(max_length=15, verbose_name="Cédula usuario")
-  nombre = models.CharField(max_length=60, verbose_name="Nombre usuario")
-  nombre_dos = models.CharField(max_length=60, verbose_name="Segundo nombre usuario")
-  apellido = models.CharField(max_length=60, verbose_name="Apellido usuario") 
-  apellido_dos = models.CharField(max_length=60, verbose_name="Segundo apellido usuario")
-  correo = models.CharField(max_length=100, verbose_name="Correo usuario")
-  password = models.CharField(max_length=8, verbose_name="Contraseña usuario")  
+  codigo_nomina = models.CharField(max_length=45, verbose_name="Código nómina")
+  cedula = models.CharField(max_length=15, verbose_name="Cédula")
+  nombre = models.CharField(max_length=60, verbose_name="Nombre")
+  nombre_dos = models.CharField(max_length=60, verbose_name="Segundo nombre")
+  apellido = models.CharField(max_length=60, verbose_name="Apellido") 
+  apellido_dos = models.CharField(max_length=60, verbose_name="Segundo apellido")
+  correo = models.CharField(max_length=100, verbose_name="Correo")
+  password = models.CharField(max_length=8, verbose_name="Contraseña")  
   
   # Rol
   class Rol(models.TextChoices):
@@ -32,8 +32,8 @@ class Usuario(models.Model):
   
 # PUNTO DE VENTA
 class PuntoVenta(models.Model):
-  nombre = models.CharField(max_length=60, verbose_name="Nombre punto de venta")
-  direccion = models.CharField(max_length=100, verbose_name="Dirección punto de venta")
+  nombre = models.CharField(max_length=60, verbose_name="Nombre")
+  direccion = models.CharField(max_length=100, verbose_name="Dirección")
   presupuesto = models.DecimalField(max_digits=8, decimal_places=2)
   
   # Estado
@@ -42,7 +42,7 @@ class PuntoVenta(models.Model):
     INACTIVO = '0', _('Inactivo')
   estado = models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")    
   
-  cod_CiudDANE = models.ForeignKey(Ciudades, on_delete=models.PROTECT, related_name='Ciudades')  
+  cod_CiudDANE = models.ForeignKey(Ciudad, on_delete=models.PROTECT, related_name='CiudadPVenta')  
   
   
   def __str__(self):
