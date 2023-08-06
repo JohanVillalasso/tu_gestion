@@ -3,9 +3,9 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def ciudades(request):
+def clientes(request):
 
     context={
 
     }
-    return render(request,'ciudades/ciudades.html',context)
+    return render(request,'clientes/clientes.html',context)
