@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ciudades',
     'clientes',
     'guia',
+    'bootstrap5', # python.exe -m pip install --upgrade pip
 ]
 
 MIDDLEWARE = [
