@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 
+# Vista
 def hola_mundo(request):
     nombre = 'Johan' 
     apellido = 'Villarreal'
