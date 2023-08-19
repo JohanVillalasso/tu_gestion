@@ -1,0 +1,423 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+    <!-- Boton regresar -->
+    <div class="container-fluid">
+        <div class="col mt-3">
+          <a class="btn btn-dark" href="{% url 'menu-ppal' %}"><i class="bi bi-arrow-left-circle-fill "></i> Regresar</a>
+        </div>
+      </div>
+    
+      <h1 class="fs-3 text-center py-3">EJECUCIÓN PRESUPUESTO ACUMULADO - CRECIMIENTO</h1>
+    
+      <!-- Datos de PDS -->
+      <div class="container-fluid">
+        <div class="row mb-3">
+          <!-- Datos receptoria -->
+          <div class="col-4 mb-4 ">
+            <div class="input-group align-items-center">
+              <label class="" for="">RECEPTORIA</label>
+              <input type="text" class="form-control ms-2 rounded-3">
+            </div>
+          </div>
+          <div class="col-4 mb-4">
+            <div class="input-group align-items-center">
+              <label for="">CÓDIGO</label>
+              <input type="text" class="form-control ms-2 rounded-3">
+            </div>
+          </div>
+          <div class="col-3 mb-4">
+            <div class="input-group align-items-center">
+              <label for="">REGIONAL</label>
+              <input type="text" class="form-control ms-2 rounded-3">
+            </div>
+          </div>
+          <div class="col-4 mb-4">
+            <div class="input-group align-items-center">
+              <label for="">MES/AÑO</label>
+              <input type="text" class="form-control ms-2 rounded-3">
+            </div>
+          </div>
+          <div class="col-7 mb-4">
+              <div class="input-group align-items-center">
+                <label for="">PRESUPUESTO DEL MES</label>
+                <input type="text" class="form-control ms-2 rounded-3">
+              </div>
+            </div>
+    
+          <!-- Tabla -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="table-responsive">
+                  <table id="example" class="table table-hover display nowrap" cellspacing="0"
+                    style=" width:100%">
+                    <thead class="fs-14">
+                      <tr class="bg-gris text-white">
+                        <th>Día mes</th>
+                        <th>Día semana</th>
+                        <th>Meta diaria</th>
+                        <th>Meta diaria acumulada</th>
+                        <th>Ejecución diaria</th>
+                        <th>Ejecución diaria acumulada</th>
+                        <th>Variación</th>
+                        <th>Cumplimiento en %</th>
+                        <th>¿Observaciones?</th>
+                      </tr>
+                    </thead>
+    
+                    <tbody class="fs-14">
+                      <tr>
+                        <th>1</th>
+                        <td>Lunes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>Martes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>Miercoles</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <td>Jueves</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>5</th>
+                        <td>Viernes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>6</th>
+                        <td>Sábado</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>7</th>
+                        <td>Domingo</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>8</th>
+                        <td>Lunes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>9</th>
+                        <td>Martes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>10</th>
+                        <td>Miercoles</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>11</th>
+                        <td>Jueves</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>12</th>
+                        <td>Viernes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>13</th>
+                        <td>Sábado</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>14</th>
+                        <td>Domingo</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>15</th>
+                        <td>Lunes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>16</th>
+                        <td>Martes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>17</th>
+                        <td>Miercoles</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>18</th>
+                        <td>Jueves</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>19</th>
+                        <td>Viernes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>20</th>
+                        <td>Sábado</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>21</th>
+                        <td>Domingo</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>22</th>
+                        <td>Lunes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>23</th>
+                        <td>Martes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>24</th>
+                        <td>Miercoles</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>25</th>
+                        <td>Jueves</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>26</th>
+                        <td>Viernes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>27</th>
+                        <td>Sábado</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>28</th>
+                        <td>Domingo</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>29</th>
+                        <td>Lunes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>30</th>
+                        <td>Martes</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <th>31</th>
+                        <td>Miercoles</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>$0</td>
+                        <td>0%</td>
+                        <td>Ninguna</td>
+                      </tr>
+  
+                    </tbody>
+    
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+<script src="{% static 'js/config-dt.js' %}"></script>
+{% endblock contenido %}

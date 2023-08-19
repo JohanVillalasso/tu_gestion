@@ -1,0 +1,145 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<!-- <section class="bg-hero-image2 min-vh-100">
+  <article class="min-vh-100"> -->
+
+    <main class="flex-grow-1">
+      <!-- Titulo -->
+      <div class="text-center p-4">
+        <h1 class="fs-3">¡Bienvenid@ al Sistema <b><i>TuGestión</i></b>!</h1>
+      </div>
+  
+      <div class="container-fluid">
+        <div class="row">
+          <!-- MENU -->
+          <div class="col-12 col-md-3 ms-md-1 mt-5 order-0">
+            <!-- Generar Guia -->
+            <ul class="nav flex-column">
+              <div class="btn-group dropend">
+                <button class="btn btn-danger mb-2 fw-bold dropdown-toggle p-1" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Generar Guia
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li class="nav-item"><a class="dropdown-item nav-link" href="{% url 'cap-guia' %}">Capturar Guía</a></li>
+                  <!-- Anular Guía -->
+                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalAnular">Anular
+                      Guía</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Rutero -->
+              <li class="nav-item">
+                <a href="{% url 'rutero' %}" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Rutero</a>
+              </li>
+              <!-- Seguimiento de Clientes -->
+              <li class="nav-item">
+                <a href="{% url 'seg-cliente' %}"
+                  class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Seguimiento de Clientes</a>
+              </li>
+              <!-- Proyeccion de Cumplimiento -->
+              <li class="nav-item">
+                <a href="{% url 'proy-cumpl' %}"
+                  class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Proyeccion
+                  De
+                  Cumplimiento</a>
+              </li>
+              <!-- Ejecucion Acumulada -->
+              <li class="nav-item">
+                <a href="{% url 'eje-acu' %}" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Ejecución
+                  Acumulada</a>
+              </li>
+              <!-- Formatos Gestion Comercial -->
+              <li class="nav-item">
+                <a href="{% url 'form-gcom' %}" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Formatos de
+                  Gestión Comercial</a>
+              </li>
+            </ul>
+  
+            <!-- Modal Anular Guía -->
+            <div class="modal fade" id="modalAnular" tabindex="-1" aria-labelledby="modalAnularLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalAnularLabel">Anular Guía</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Guía -->
+                      <div class="mb-3">
+                        <label for="guia" class="form-label">Guía</label>
+                        <input type="text" class="form-control" id="guia">
+                      </div>
+                      <!-- Causal -->
+                      <div class="mb-4">
+                        <label for="causal" class="form-label">Causal</label>
+                        <select name="causal" class="form-control" id="causal">
+                          <option value="value1" selected>-- SELECCIONE --</option>
+                          <option value="value2">Error captura de datos</option>
+                          <option value="value3">Error tarifa</option>
+                          <option value="value4">Error en el servicio</option>
+                        </select>
+                      </div>
+                      <!-- Advertencia -->
+                      <div class="mb-4 border border-danger p-2">
+                        <p class="ms-3"><b>Atención:</b> recuerde que para anular una guía debe:</p>
+                        <ul>
+                          <li>No estar dentro de un corte</li>
+                          <li>Estar en estado producida</li>
+                          <li>No ser capturada en días anteriores</li>
+                          <li>Debe ser anulada por el usuario que la capturó</li>
+                        </ul>
+                      </div>
+  
+                      <div class="col-md-6 input-group-sm mx-auto">
+                        <a class="form-control btn btn-danger fw-bold mb-2 rounded-3" href="">
+                          <i class="bi bi-x-circle-fill me-2 "></i>ANULAR</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- CARRUSEL -->
+          <div class="col-12 col-md-7 mx-auto mt-2">
+            <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active ratio ratio-4x3">
+                  <img src="{% static 'img/slide-1.jpg' %}" class="d-block mx-auto" alt="imagen 1">
+                </div>
+                <div class="carousel-item ratio ratio-4x3">
+                  <img src="{% static 'img/slide-2.png' %}" class="d-block mx-auto" alt="imagen 2">
+                </div>
+                <div class=" carousel-item ratio ratio-4x3">
+                  <img src="{% static 'img/slide-3.jpg' %}" class="d-block mx-auto" alt="imagen 3">
+                </div>
+              </div>
+              <button class=" carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </main>
+    
+  <!-- </article>
+</section> -->
+
+{% endblock contenido %}
+
+{% comment %} {% include 'partials/js.html' %} {% endcomment %}
